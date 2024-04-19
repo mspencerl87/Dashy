@@ -1,0 +1,42 @@
+#Widgets Custom
+  - name: Pi-Hole
+    widgets:
+      - type: pi-hole-stats
+        options:
+          hostname: http://192.168.10.5
+          apiKey: 9a70d1aac5b82a30f90fc50194ddfc53c4305b76394b990295756b5bddf9af57
+          statusCheckAllowInsecure: true
+          useProxy: true
+        id: 0_622_piholestats
+  - name: Glances Docker
+    widgets:
+      - type: gl-cpu-speedometer
+        options:
+          hostname: http://192.168.10.68:61208
+          statusCheckAllowInsecure: true
+          useProxy: true
+        id: 0_1333_glcpuspeedometer
+      - type: gl-current-mem
+        options:
+          hostname: http://192.168.10.68:61208
+          statusCheckAllowInsecure: true
+          useProxy: true
+        id: 1_1333_glcurrentmem
+      - type: gl-disk-space
+        options:
+          hostname: http://192.168.10.68:61208
+          statusCheckAllowInsecure: true
+          useProxy: true
+        id: 2_1333_gldiskspace
+      - type: gl-disk-io
+        options:
+          hostname: http://192.168.10.68:61208
+          statusCheckAllowInsecure: true
+          useProxy: true
+        id: 3_1333_gldiskio
+    displayData:
+      sortBy: alphabetical
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
